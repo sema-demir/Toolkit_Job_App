@@ -21,8 +21,15 @@ const jobSlice = createSlice({
       state.error = null;
       state.jobs = action.payload;
     },
+    deleteJob: (state, action) => {
+      // silecegimiz elemanın idsi üzerinden sırasını bul
+      const index = state.jobs.findIndex((i) => i.id === action.payload);
+
+      // elemanı diziden kaldır
+      state.jobs.splice(index, 1);
+    },
   },
 });
-export const { setError, setJobs, setLoading } = jobSlice.actions;
+export const { setError, setJobs, setLoading, deleteJob } = jobSlice.actions;
 
 export default jobSlice.reducer;

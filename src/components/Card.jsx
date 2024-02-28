@@ -8,20 +8,32 @@ const Card = ({ job }) => {
     Reddedildi: "red",
     "Devam Ediyor": "orange",
   };
+  const handleDelete = () => {
+    if (confirm("Silmek istediğinizden emin misiniz ? ")) {
+      // api isteği at
+      axios
+        .delete(`http://localhost:3001/jobs/${job.id}`)
+        // başarılı olursa store'dan kaldır
+        .then(() => {
+          dispatch(deleteJob(job.id));
+        });
+      // todo başarısız olursa uyarı ver
+    }
+  };
   return (
     <div className="card">
       <div className="head">
         <div className="left">
           <div className="letter">
-            <span>A</span>
+            <span>{job.company[0]}</span>
           </div>
           <div className="info">
-            <p>Product Manager</p>
-            <p>Amazon</p>
+            <p>{job.position}</p>
+            <p>{job.company}</p>
           </div>
         </div>
         <div className="right">
-          <DelButton />
+          <DelButton handleDelete={handleDelete} />
         </div>
       </div>
       <div className="body">
