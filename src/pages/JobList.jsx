@@ -1,26 +1,10 @@
-import axios from "axios";
-import { useEffect } from "react";
-import { setError, setJobs, setLoading } from "../redux/slices/jobSlice";
-import { useDispatch, useSelector } from "react-redux";
 import Loader from "../components/Loader";
 import Error from "../components/Error";
 import Card from "../components/Card";
-const JobList = () => {
+import { useSelector } from "react-redux";
+const JobList = ({ getJobs }) => {
   const jobState = useSelector((store) => store.jobReducer);
-  const dispatch = useDispatch();
 
-  const getJobs = () => {
-    //slicetaki yükleniyoru true cek
-    dispatch(setLoading());
-    axios
-      .get("http://localhost:3001/jobs")
-      .then((res) => dispatch(setJobs(res.data)))
-      .catch((err) => dispatch(setError(err.message)));
-  };
-
-  useEffect(() => {
-    getJobs();
-  }, []);
   return (
     <div className="list-page">
       {/*

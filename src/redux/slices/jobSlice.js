@@ -28,8 +28,12 @@ const jobSlice = createSlice({
       // elemanı diziden kaldır
       state.jobs.splice(index, 1);
     },
+    createJob: (state, action) => {
+      state.jobs.push(action.payload);
+    },
   },
 });
-export const { setError, setJobs, setLoading, deleteJob } = jobSlice.actions;
+export const { setError, setJobs, setLoading, deleteJob, createJob } =
+  jobSlice.actions;
 
 export default jobSlice.reducer;

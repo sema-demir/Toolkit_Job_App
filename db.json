@@ -10,31 +10,49 @@
       "date": "3/10/2024"
     },
     {
-      "id": "6",
-      "position": "Data Scientist",
-      "company": "Microsoft",
-      "location": "Redmond",
+      "id": "577f47d8-3bee-4714-930f-121b3a1d96c4",
+      "position": "React developer",
+      "company": "Trendyol",
+      "location": "İstanbul",
       "status": "Devam Ediyor",
-      "type": "Tam Zamanlı",
-      "date": "3/1/2024"
+      "type": "Uzaktan",
+      "date": "29.02.2024"
     },
     {
-      "id": "7",
+      "id": "35ffa84e-1d3e-4fa9-8f76-e86efd1c9947",
       "position": "Frontend Developer",
       "company": "Udemig",
-      "location": "İzmir/Bayraklı",
-      "status": "Devam Ediyor",
-      "type": "Tam Zamanlı",
-      "date": "1/17/2021"
+      "location": "İstanbul",
+      "status": "Mülakat",
+      "type": "Staj",
+      "date": "29.02.2024"
     },
     {
-      "id": "8",
-      "position": "Marketing Manager",
-      "company": "Coca Cola",
-      "location": "İstanbul/Levent",
-      "status": "Mülakat",
-      "type": "Tam Zamanlı",
-      "date": "9/12/2020"
+      "id": "40a6483b-bfb4-4d93-9d21-a8cca5ee57e2",
+      "position": "Back-End",
+      "company": "Arabuleu",
+      "location": "İstanbul",
+      "status": "Reddedildi",
+      "type": "Yarı Zamanlı",
+      "date": "29.02.2024"
+    },
+    {
+      "id": "ba5917aa-88e7-4618-8f95-012cebce4636",
+      "position": "ReactNative Develeoper",
+      "company": "Emartecs",
+      "location": "Konya",
+      "status": "Devam Ediyor",
+      "type": "Staj",
+      "date": "29.02.2024"
+    },
+    {
+      "id": "0248bfad-8d53-4d1d-8fef-8bf6c45875f5",
+      "position": "Frontend Developer",
+      "company": "ciçek sepeti",
+      "location": "İzmir",
+      "status": "Reddedildi",
+      "type": "Uzaktan",
+      "date": "29.02.2024"
     }
   ]
 }

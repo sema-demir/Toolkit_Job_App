@@ -2,7 +2,12 @@ import DelButton from "./DelButton";
 import { MdLocationOn } from "react-icons/md";
 import { FaSuitcase } from "react-icons/fa";
 import { BsFillCalendarDateFill } from "react-icons/bs";
+import { useDispatch } from "react-redux";
+import { toast } from "react-toastify";
+import axios from "axios";
+import { deleteJob } from "../redux/slices/jobSlice";
 const Card = ({ job }) => {
+  const dispatch = useDispatch();
   const colors = {
     Mülakat: "green",
     Reddedildi: "red",
@@ -13,11 +18,14 @@ const Card = ({ job }) => {
       // api isteği at
       axios
         .delete(`http://localhost:3001/jobs/${job.id}`)
-        // başarılı olursa store'dan kaldır
+        // başarılı olursa storedan kaldır
         .then(() => {
           dispatch(deleteJob(job.id));
+          toast.success("İşleminiz basarıyla kaldırıldı");
+        })
+        .catch((err) => {
+          toast.error("Üzgünüz İşlem Gerçekleşmedi");
         });
-      // todo başarısız olursa uyarı ver
     }
   };
   return (
