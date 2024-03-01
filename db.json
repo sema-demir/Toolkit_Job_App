@@ -1,22 +1,13 @@
 {
   "jobs": [
     {
-      "id": "5",
-      "position": "Product Manager",
-      "company": "Amazon",
-      "location": "Seattle",
-      "status": "Mülakat",
-      "type": "Yarı Zamanlı",
-      "date": "3/10/2024"
-    },
-    {
       "id": "577f47d8-3bee-4714-930f-121b3a1d96c4",
       "position": "React developer",
       "company": "Trendyol",
       "location": "İstanbul",
       "status": "Devam Ediyor",
       "type": "Uzaktan",
-      "date": "29.02.2024"
+      "date": "02/29/2024"
     },
     {
       "id": "35ffa84e-1d3e-4fa9-8f76-e86efd1c9947",
@@ -25,7 +16,7 @@
       "location": "İstanbul",
       "status": "Mülakat",
       "type": "Staj",
-      "date": "29.02.2024"
+      "date": "02/28/2024"
     },
     {
       "id": "40a6483b-bfb4-4d93-9d21-a8cca5ee57e2",
@@ -34,7 +25,7 @@
       "location": "İstanbul",
       "status": "Reddedildi",
       "type": "Yarı Zamanlı",
-      "date": "29.02.2024"
+      "date": "02/23/2024"
     },
     {
       "id": "ba5917aa-88e7-4618-8f95-012cebce4636",
@@ -43,16 +34,34 @@
       "location": "Konya",
       "status": "Devam Ediyor",
       "type": "Staj",
-      "date": "29.02.2024"
+      "date": "03/12/2024"
     },
     {
-      "id": "0248bfad-8d53-4d1d-8fef-8bf6c45875f5",
-      "position": "Frontend Developer",
-      "company": "ciçek sepeti",
-      "location": "İzmir",
+      "id": "54e869fb-05cb-41a0-9825-1b298ed848a3",
+      "position": "ReactNative Develeoper",
+      "company": "Trendyol",
+      "location": "İstanbul",
       "status": "Reddedildi",
       "type": "Uzaktan",
-      "date": "29.02.2024"
+      "date": "01.03.2024"
+    },
+    {
+      "id": "49f453dd-c9aa-437c-9f66-df0e79cf824e",
+      "position": "Frontend Developer",
+      "company": "Udemig",
+      "location": "İstanbul",
+      "status": "Reddedildi",
+      "type": "Uzaktan",
+      "date": "01.03.2024"
+    },
+    {
+      "id": "5241a23e-3774-42ff-8134-da3469cff70e",
+      "position": "Frontend Developer",
+      "company": "Trendyol",
+      "location": "İstanbul",
+      "status": "Devam Ediyor",
+      "type": "Uzaktan",
+      "date": "01.03.2024"
     }
   ]
 }

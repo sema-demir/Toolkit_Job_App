@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   jobs: [],
+  mainJobs: [],
   isLoading: false,
   error: null,
 };
@@ -20,6 +21,7 @@ const jobSlice = createSlice({
       state.isLoading = false;
       state.error = null;
       state.jobs = action.payload;
+      state.mainJobs = action.payload;
     },
     deleteJob: (state, action) => {
       // silecegimiz elemanın idsi üzerinden sırasını bul
@@ -31,9 +33,51 @@ const jobSlice = createSlice({
     createJob: (state, action) => {
       state.jobs.push(action.payload);
     },
+    //aratılan sirket isimine göre filtreleme yaoar
+    filterBySearch: (state, action) => {
+      // aratılan kelime
+      const query = action.payload.text.toLowerCase();
+
+      // filtreleme yap
+      state.jobs = state.mainJobs.filter(
+        (i) =>
+          i[action.payload.name].toLowerCase().includes(query) ||
+          i.position.toLowerCase().includes(query)
+      );
+    },
+    //sıralama yapara a-z ye eskiden yeniye vs
+    sortJobs: (state, action) => {
+      switch (action.payload) {
+        case "a-z":
+          state.jobs.sort((a, b) => a.company.localeCompare(b.company));
+          break;
+
+        case "z-a":
+          state.jobs.sort((a, b) => b.company.localeCompare(a.company));
+          break;
+
+        case "En Yeni":
+          state.jobs.sort((a, b) => new Date(b.date) - new Date(a.date));
+          break;
+
+        case "En Eski":
+          state.jobs.sort((a, b) => new Date(a.date) - new Date(b.date));
+          break;
+
+        default:
+          break;
+      }
+    },
   },
 });
-export const { setError, setJobs, setLoading, deleteJob, createJob } =
-  jobSlice.actions;
+export const {
+  setError,
+  setJobs,
+  setLoading,
+  deleteJob,
+  createJob,
+  filterBySearch,
+  sortJobs,
+} = jobSlice.actions;
 
 export default jobSlice.reducer;

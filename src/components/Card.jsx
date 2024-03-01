@@ -55,7 +55,7 @@ const Card = ({ job }) => {
         </div>
         <div className="field">
           <BsFillCalendarDateFill />
-          <p>{job.date}</p>
+          <p>{new Date(job.date).toLocaleDateString("tr")}</p>
         </div>
         <div className="status">
           <p

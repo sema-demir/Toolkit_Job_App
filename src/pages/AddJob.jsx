@@ -21,7 +21,7 @@ const AddJob = () => {
     const newJobData = Object.fromEntries(formData.entries());
 
     // tarih ve id ekle
-    newJobData.date = new Date().toLocaleDateString("tr");
+    newJobData.date = new Date().toLocaleDateString();
     newJobData.id = v4();
     //console.log(newJobData);
 

@@ -2,11 +2,14 @@ import Loader from "../components/Loader";
 import Error from "../components/Error";
 import Card from "../components/Card";
 import { useSelector } from "react-redux";
+import Filter from "../components/Filter";
+
 const JobList = ({ getJobs }) => {
   const jobState = useSelector((store) => store.jobReducer);
 
   return (
     <div className="list-page">
+      <Filter />
       {/*
       1. Yüklenme devam ediyorsa ekrana loader bas
       2. Yüklenme bittiyse hata varsa ekrana hatayı ve tekrar dene butonu bas
