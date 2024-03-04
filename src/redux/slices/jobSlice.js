@@ -68,6 +68,9 @@ const jobSlice = createSlice({
           break;
       }
     },
+    clearFilters: (state, action) => {
+      state.jobs = state.mainJobs;
+    },
   },
 });
 export const {
@@ -78,6 +81,7 @@ export const {
   createJob,
   filterBySearch,
   sortJobs,
+  clearFilters,
 } = jobSlice.actions;
 
 export default jobSlice.reducer;
